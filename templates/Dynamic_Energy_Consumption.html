@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic_Energy_Consumption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+    <h1>Dynamic_Energy_Consumption<h1>
+    <form action="{{ url_for('Dynamic_Energy_consumption')}}" method="post">
+        <input type="text" name="speed" placeholder="speed" required="required" />
+        <input type="text" name="distance"  placeholder="distance"required="required" />
+        <input type="text" name="altitude" placeholder="altitude" required="required" />
+        <input type="text" name="signal" placeholder="signal" required="required" />
+	<input type="text" name="auxiliary_voltage" placeholder="auxiliary_voltage" required="required" />
+        <input type="text" name="batteryvoltage"  placeholder="batteryvoltage"required="required" />
+        <input type="text" name="batterycurrent" placeholder="batterycurrent" required="required" />
+        <input type="text" name="cellmaxvoltage" placeholder="cellmaxvoltage" required="required" />
+	<input type="text" name="cellminvoltage" placeholder="cellminvoltage" required="required" />
+        <input type="text" name="batterysoc"  placeholder="batterysoc"required="required" />
+        <input type="text" name="throughput" placeholder="throughput" required="required" />
+        <input type="text" name="batterysoh" placeholder="batterysoh" required="required" />
+        <input type="text" name="h_accel"  placeholder="h_accel"required="required" />
+        <input type="text" name="h_brake" placeholder="h_brake" required="required" />
+        <input type="text" name="speed_diff" placeholder="speed_diff" required="required" />
+        <button type="submit">predict</button>
+    </form>
+   <br>
+    {% if prediction is not none %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Home</a>
+</body>
+</html>

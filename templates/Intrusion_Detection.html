@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Engine_health_condition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+    <h1>Intrusion_Detection<h1>
+    <form action="{{ url_for('Intrusion_Detection')}}" method="post">
+        <input type="text" name='dur' placeholder='dur' required="required" />
+        <input type="text" name='service'  placeholder='service'required="required" />
+        <input type="text" name='state' placeholder='state' required="required" />
+        <input type="text" name='spkts' placeholder='spkts' required="required" />
+	<input type="text" name='dpkts' placeholder='dpkts' required="required" />
+	<input type="text" name='sbytes' placeholder='sbytes' required="required" />
+	<input type="text" name='dbytes' placeholder='dbytes' required="required" />
+	<input type="text" name='rate' placeholder='rate' required="required" />
+	<input type="text" name='sttl' placeholder='sttl' required="required" />
+	<input type="text" name='dttl'placeholder='dttl' required="required" />
+	<input type="text" name= 'sload' placeholder= 'sload' required="required" />
+	<input type="text" name='dload' placeholder='dload required="required" />
+	<input type="text" name='sloss'' placeholder='sloss' required="required" />
+	<input type="text" name='dloss' placeholder='dloss' required="required" />
+	<input type="text" name='sinpkt' placeholder='sinpkt' required="required" />
+	<input type="text" name='dinpkt' placeholder='dinpkt' required="required" />
+	<input type="text" name='sjit' placeholder= 'sjit' required="required" />
+	<input type="text" name='djit' placeholder='djit' required="required" />
+	<input type="text" name='swin' placeholder='swin' required="required" />
+	<input type="text" name='stcpb' placeholder='stcpb' required="required" />
+	<input type="text" name='dtcpb' placeholder='dtcpb' required="required" />
+	<input type="text" name='dwin' placeholder='dwin' required="required" />
+	<input type="text" name='tcprtt' placeholder='tcprtt' required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+	<input type="text" name= placeholder= required="required" />
+
+
+
+
+        <button type="submit">predict</button>
+    </form>
+   <br>
+    {% if prediction is not none %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Home</a>
+</body>
+</html>
+'id', 'dur', 'proto', 'service', 'state', 'spkts', 'dpkts', 'sbytes', 'dbytes', 'rate', 'sttl', 'dttl', 'sload', 'dload', 'sloss', 'dloss', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'swin', 'stcpb',
+       'dtcpb', 'dwin', 'tcprtt', 'synack', 'ackdat', 'smean', 'dmean', 'trans_depth', 'response_body_len', 'ct_srv_src', 'ct_state_ttl', 'ct_dst_ltm', 'ct_src_dport_ltm', 'ct_dst_sport_ltm',
+       'ct_dst_src_ltm', 'is_ftp_login', 'ct_ftp_cmd', 'ct_flw_http_mthd', 'ct_src_ltm', 'ct_srv_dst', 'is_sm_ips_ports', 'attack_cat',

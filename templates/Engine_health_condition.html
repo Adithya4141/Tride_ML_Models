@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Engine_health_condition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+    <h1>Engine_health_condition<h1>
+    <form action="{{ url_for('Engine_health_condition')}}" method="post">
+        <input type="text" name="Engine rpm" placeholder="rpm" required="required" />
+        <input type="text" name="Lub oil pressure (m)"  placeholder="engine_oil_pressure"required="required" />
+        <input type="text" name="lub oil temp" placeholder="oil_temp" required="required" />
+        <input type="text" name="Coolant temp" placeholder="coolant_temp" required="required" />
+        <button type="submit">predict</button>
+    </form>
+   <br>
+    {% if prediction is not none %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Home</a>
+</body>
+</html>

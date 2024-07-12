@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic_Energy_Consumption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dynamic_Energy_Consumption</h1>
+    <form method="POST">
+        <input type="text" name="Engine rpm" placeholder="Engine Rpm (rpm)" required="required" />
+        <input type="text" name="Lub oil pressure" placeholder="Lub oil pressure (m)" required="required" />
+        <input type="text" name="Fuel pressure" placeholder="Fuel pressure" required="required" />
+        <input type="text" name="Coolant pressure" placeholder="Coolant pressure" required="required" />
+        <input type="text" name="lub oil temp" placeholder="lub oil temp" required="required" />
+        <input type="text" name="Coolant temp" placeholder="Coolant temp" required="required" />
+        <button type="submit">prediction</button>
+    </form>
+    {% if prediction is not none %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Home</a>
+</body>
+</html>
+
